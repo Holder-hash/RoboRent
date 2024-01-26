@@ -12,14 +12,111 @@ header {
   .balance__contain {
     width: 281px;
     height: 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 0px 0px 40px 40px;
     background: #1e3653;
+
+    p:nth-child(1) {
+      color: #fff;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    p:nth-child(2) {
+      color: #c0bfc0;
+      font-family: Inter;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: #2596ff;
+      font-family: Inter;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
   }
 
   .user-info__contain {
+    position: relative;
+    display: flex;
     width: 223px;
     height: 83px;
     border-radius: 40px 0px 0px 40px;
     background: #1e3653;
+    align-items: center;
+    justify-content: center;
+
+    .user-info__inner {
+      position: absolute;
+      display: flex;
+      gap: 13px;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      min-width: 93%;
+      max-height: 59px;
+
+      .user-info__avatar {
+        width: 59px;
+        height: 59px;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      .user-info__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        shape-outside: margin-box;
+        float: left;
+
+        .user-info__links-name {
+          color: #fff;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .user-info__links-telegram {
+          color: #2596ff;
+          font-family: Inter;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .user-info__links-subscription {
+          color: #c0bfc0;
+          font-family: Inter;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+
+          span {
+            color: #e94747;
+            font-family: Inter;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+      }
+    }
   }
 }
