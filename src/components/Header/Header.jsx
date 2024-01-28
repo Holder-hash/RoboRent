@@ -23,7 +23,9 @@ function Header() {
             </div>
             <div className="user-info__links">
               <p className="user-info__links-name">@Diblaodjsss</p>
-              <p className="user-info__links-telegram">Привязать Telegram</p>
+              <a href="" className="user-info__links-telegram">
+                Привязать Telegram
+              </a>
               <p className="user-info__links-subscription">
                 Подписка: <span>отсутствует</span>
               </p>
