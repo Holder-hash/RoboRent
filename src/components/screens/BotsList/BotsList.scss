@@ -3,6 +3,7 @@
   height: 488px;
   border-radius: 40px;
   background: #1e3653;
+  padding: 19px 33px;
 }
 
 .available-bots {
@@ -10,4 +11,14 @@
   height: 494px;
   border-radius: 40px;
   background: #1e3653;
+  padding: 19px 33px;
+}
+
+.bots-list__title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
