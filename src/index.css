@@ -14,3 +14,18 @@ body {
   font-family: inter;
   src: url("./assets/fonts/Inter.ttf");
 }
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 33px;
+  display: flex;
+  gap: 23px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
