@@ -7,5 +7,10 @@
 }
 
 body {
-  background: #4582F9;
+  background: #4582f9;
+}
+
+@font-face {
+  font-family: inter;
+  src: url("./assets/fonts/Inter.ttf");
 }
