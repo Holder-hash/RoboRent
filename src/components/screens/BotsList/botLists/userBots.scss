@@ -1,0 +1,52 @@
+.user-bots {
+  width: 100%;
+  min-height: 494px;
+  border-radius: 40px;
+  background: #1e3653;
+  padding: 19px 33px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    li {
+      height: 93px;
+      display: flex;
+      border-radius: 40px;
+      background: #152333;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 25px 0px 14px;
+
+      .bots__item-info {
+        display: flex;
+        gap: 17px;
+        align-items: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+        .bots__item-name {
+          color: #fff;
+          margin-bottom: 15px;
+        }
+
+        .bots__item-status {
+          color: #c0bfc0;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      .bots__item-buttons {
+        display: flex;
+        gap: 25px;
+      }
+    }
+  }
+}
