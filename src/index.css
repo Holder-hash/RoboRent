@@ -19,6 +19,7 @@ body {
 }
 
 .wrapper {
+  width: 98%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -28,7 +29,9 @@ body {
 }
 
 main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 19px;
+  margin-bottom: 24px;
 }

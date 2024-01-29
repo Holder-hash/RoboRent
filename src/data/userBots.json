@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "Бот продажник",
+        "status": [
+            true,
+            "19.10.2039"
+        ],
+        "img": "http://risovach.ru/upload/2018/08/generator/belyy-kvadrat_184928579_orig_.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Бот акционер",
+        "status": [
+            true,
+            "19.10.2039"
+        ],
+        "img": "http://risovach.ru/upload/2018/08/generator/belyy-kvadrat_184928579_orig_.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Бот майнер",
+        "status": [
+            true,
+            "19.10.2039"
+        ],
+        "img": "http://risovach.ru/upload/2018/08/generator/belyy-kvadrat_184928579_orig_.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Бот фишер",
+        "status": [
+            false
+        ],
+        "img": "http://risovach.ru/upload/2018/08/generator/belyy-kvadrat_184928579_orig_.jpg"
+    }
+]

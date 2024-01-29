@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "Бот продажник",
+        "discraption": "Бот для продажи вааших товаров",
+        "peculiarities": "принимает оплату",
+        "img": "https://sun1-84.userapi.com/s/v1/ig2/62n6Z-amiNp_DreYnKu6BFfhMUsjmznV3PvRYmENgF__BEi-PoeXX5LeusZdZt9ZG4VehbC6K18VX-Jp3PsKI0MJ.jpg?size=900x900&quality=95&crop=0,0,900,900&ava=1"
+    },
+    {
+        "id": "2",
+        "name": "Бот акционер",
+        "discraption": "Бот для менеджмента ваших акций",
+        "peculiarities": "встроенный API",
+        "img": "https://sun6-21.userapi.com/s/v1/ig2/b5mQPetZsZpnilQkcG-zxT7o3fhl_nJ1vO5-0cEhaGzISpN3j4gvk5nFb7QiLbBLEkvlvU88y58iPv3Bu6lwrzL3.jpg?size=1400x1400&quality=96&crop=0,0,1400,1400&ava=1"
+    },
+    {
+        "id": "3",
+        "name": "Бот майнер",
+        "discraption": "Бот для майнинга криптовалюты",
+        "peculiarities": "быстрый старт",
+        "img": "https://w7.pngwing.com/pngs/930/106/png-transparent-fashion-model-the-elder-scrolls-online-black-desert-online-model-celebrities-blue-game.png"
+    },
+    {
+        "id": "4",
+        "name": "Бот фишер",
+        "discraption": "Бот для фишинга данных",
+        "peculiarities": "встроенные сервисы",
+        "img": "https://kartinki.pibig.info/uploads/posts/2023-04/1681713030_kartinki-pibig-info-p-bot-kartinka-arti-pinterest-16.png"
+    }
+]
