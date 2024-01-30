@@ -1,6 +1,7 @@
 [
     {
         "id": "1",
+        "token": "odjfjds#jdjcdsfdscd878a7sdh77",
         "name": "Бот продажник",
         "status": [
             true,
@@ -10,6 +11,7 @@
     },
     {
         "id": "2",
+        "token": "odjfjds#jdjcdsfdscd878a7sdh77",
         "name": "Бот акционер",
         "status": [
             true,
@@ -19,6 +21,7 @@
     },
     {
         "id": "3",
+        "token": "odjfjds#jdjcdsfdscd878a7sdh77",
         "name": "Бот майнер",
         "status": [
             true,
@@ -28,6 +31,7 @@
     },
     {
         "id": "4",
+        "token": "odjfjds#jdjcdsfdscd878a7sdh77",
         "name": "Бот фишер",
         "status": [
             false,
