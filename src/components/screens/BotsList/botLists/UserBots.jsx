@@ -1,10 +1,12 @@
 import userBots from "../../../../data/userBots.json";
 import BotsListBtn from "../../../ui/BotListBtn/BotsListBtn";
 import "./userBots.scss";
+import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
 function UserBots() {
+  const navigate = useNavigate();
   // const [availableBots, setUserBots] = useState([]);
 
   useEffect(() => {
@@ -36,8 +38,12 @@ function UserBots() {
         </div>
       </div>
       <div className="bots__item-buttons">
-        <BotsListBtn>Перейти в бота</BotsListBtn>
-        <BotsListBtn>Настроить</BotsListBtn>
+        <BotsListBtn onClick={() => navigate(`/RoboRent/${bot.id}`)}>
+          Перейти в бота
+        </BotsListBtn>
+        <BotsListBtn onClick={() => navigate(`/RoboRent/${bot.id}`)}>
+          Настроить
+        </BotsListBtn>
       </div>
     </li>
   ));
