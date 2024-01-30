@@ -36,8 +36,8 @@ function UserBots() {
         </div>
       </div>
       <div className="bots__item-buttons">
-        <BotsListBtn>Протестить</BotsListBtn>
-        <BotsListBtn>Хочу себе</BotsListBtn>
+        <BotsListBtn>Перейти в бота</BotsListBtn>
+        <BotsListBtn>Настроить</BotsListBtn>
       </div>
     </li>
   ));
