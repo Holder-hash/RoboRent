@@ -47,7 +47,7 @@ function UserBotSinglePage({ to }) {
               </div>
               <div className="bots-settings__inputs">
                 <label htmlFor="token">Token вашего бота:</label>
-                <BotSettingInput type="text" />
+                <BotSettingInput type="text" value={bot.token} disabled />
                 <label htmlFor="token">Текст приветствия:</label>
                 <BotSettingInput type="text" />
               </div>
