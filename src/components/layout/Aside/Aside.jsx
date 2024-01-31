@@ -35,10 +35,6 @@ function Aside() {
           </ul>
         </nav>
       </div>
-      <div className="tg-message">
-        <p>Сообщение с телеграмм канала</p>
-        <div id="tg-message__body" />
-      </div>
     </div>
   );
 }
