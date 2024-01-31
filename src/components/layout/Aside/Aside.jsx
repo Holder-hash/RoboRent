@@ -1,16 +1,6 @@
 import "./Aside.scss";
-import { useEffect } from "react";
 
 function Aside() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://telegram.org/js/telegram-widget.js?22";
-    script.async = true;
-    script.setAttribute("data-telegram-post", "wbpointlearning/955");
-    script.setAttribute("data-width", "100%");
-    document.getElementById("tg-message__body").appendChild(script); // добавляем скрипт в нужный контейнер
-  }, []);
-
   return (
     <div className="aside">
       <div className="menu">
