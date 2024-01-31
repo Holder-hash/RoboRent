@@ -3,6 +3,7 @@ import "./UserBotSinglePage.scss";
 import BotSettingInput from "../../ui/BotSettingsInput/BotSettingInput";
 import BotsListBtn from "../../ui/BotListBtn/BotsListBtn";
 import userBots from "../../../data/userBots.json";
+import UserBotSingleCatalog from "./UserBotSingleCatalog/UserBotSingleCatalog";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -62,7 +63,10 @@ function UserBotSinglePage({ to }) {
           ))}
         </form>
       </div>
-      <div className="bots-contain"></div>
+      <div className="bots-contain">
+        <p className="bots-list__title">Каталог бота:</p>
+        <UserBotSingleCatalog data={userBots} />
+      </div>
     </>
   );
 }
