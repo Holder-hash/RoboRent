@@ -44,7 +44,9 @@ function UserBotSinglePage({ to }) {
                     </p>
                   </div>
                 </div>
-                <BotsListBtn>Отключить бота</BotsListBtn>
+                <BotsListBtn className="button_padding">
+                  Отключить бота
+                </BotsListBtn>
               </div>
               <div className="bots-settings__inputs">
                 <label htmlFor="token">Token вашего бота:</label>
@@ -54,8 +56,9 @@ function UserBotSinglePage({ to }) {
               </div>
               <div className="bots-settings__footer">
                 <div className="bots-settings__footer-additional">
-                  <BotsListBtn>Пользователи</BotsListBtn>
-                  <BotsListBtn>Пользователи</BotsListBtn>
+                  <BotsListBtn className="button_padding">
+                    Пользователи
+                  </BotsListBtn>
                 </div>
                 <BotsListBtn>Сохранить</BotsListBtn>
               </div>

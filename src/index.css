@@ -35,3 +35,8 @@ main {
   gap: 19px;
   margin-bottom: 24px;
 }
+
+.button_padding {
+  width: unset !important;
+  padding: 0 15px !important;
+}
