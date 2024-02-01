@@ -50,6 +50,7 @@ function UserBotSingleCatalog({ data }) {
             <div className="bots__item-buttons">
               <BotListInput
                 type="number"
+                onBlur={(e) => e.target.form.submit()}
                 style={{
                   maxWidth: "107px",
                   textAlign: "center",
