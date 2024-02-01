@@ -14,8 +14,12 @@ function UserBotSingleCatalog({ data }) {
   const onSubmitBotPrice = (event) => {
     event.preventDefault();
     const targetElement = event.target.querySelector("input");
-
-    console.log(targetElement.value);
+    alert(
+      `прайс ${
+        event.target.querySelector(".bots__item-name").textContent
+      } изменен на ${targetElement.value}`
+    );
+    event.target.submit();
   };
 
   return (
