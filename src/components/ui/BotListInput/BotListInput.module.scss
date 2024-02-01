@@ -10,3 +10,8 @@
   font-size: 14px;
   font-weight: 600;
 }
+.input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}

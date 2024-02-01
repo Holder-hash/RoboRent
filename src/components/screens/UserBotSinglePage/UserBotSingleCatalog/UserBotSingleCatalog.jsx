@@ -11,8 +11,11 @@ function UserBotSingleCatalog({ data }) {
     setuserBotCatalog(data.map((bot) => bot.catalog)[0]);
   }, [data]);
 
-  const onChangeBotPrice = (event) => {
-    console.log(event.target.value);
+  const onSubmitBotPrice = (event) => {
+    event.preventDefault();
+    const targetElement = event.target.querySelector("input");
+
+    console.log(targetElement.value);
   };
 
   return (
@@ -20,6 +23,7 @@ function UserBotSingleCatalog({ data }) {
       {userBotCatalog.map((bot, index) => (
         <li key={index}>
           <form
+            onSubmit={onSubmitBotPrice}
             style={{
               display: "flex",
               alignItems: "center",
@@ -41,13 +45,13 @@ function UserBotSingleCatalog({ data }) {
             </div>
             <div className="bots__item-buttons">
               <BotListInput
+                type="number"
                 style={{
                   maxWidth: "107px",
                   textAlign: "center",
                   fontSize: "14px",
                 }}
-                value={"1000р"}
-                onChange={onChangeBotPrice}
+                defaultValue={Number(bot.price)}
               />
               <BotsListBtn>Удалить</BotsListBtn>
             </div>
