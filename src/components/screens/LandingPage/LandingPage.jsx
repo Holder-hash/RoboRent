@@ -1,9 +1,11 @@
 import "./LandingPage.scss";
+import LandingBgElements from "./LandingBgElements";
 
 function LandingPage() {
   return (
     <>
       <section className="overview">
+        <LandingBgElements />
         <div className="overview__left">
           <p className="overview__left-title">
             Быстро
