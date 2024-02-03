@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 function Layout() {
   const location = useLocation();
   if (location.pathname != "/RoboRent/bots-list") {
-    document.querySelector("body").style.background = "rgb(21, 35, 51);";
+    document.querySelector("body").classList.add("body_dark");
   }
   return (
     <>
