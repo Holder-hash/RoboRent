@@ -28,6 +28,7 @@ function LandingPage() {
 
       <section className="advantages">
         <StarsContain title={"Преимущества"} />
+
         <div className="advantages__cards">
           <div className="advantages__cards-item_white">
             <p className="advantages__cards-item-title">
@@ -66,6 +67,17 @@ function LandingPage() {
               <br />а ассортимент больше
             </p>
           </div>
+        </div>
+
+        <div className="advantages__about">
+          <p>
+            <span>Наш проект</span> продвинет{" "}
+            <span>
+              ваши услуги
+              <br />
+            </span>
+            и принесет <span>дополнительную</span> прибыль
+          </p>
         </div>
       </section>
     </div>
