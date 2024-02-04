@@ -1,5 +1,6 @@
 import "./LandingPage.scss";
 import LandingBgElements from "./LandingBgElements";
+import StarsContain from "../../ui/landing/StarsContain/StarsContain";
 
 function LandingPage() {
   return (
@@ -21,6 +22,9 @@ function LandingPage() {
         <div className="overview__right">
           <button className="overview__right-btn">Перейти</button>
         </div>
+      </section>
+      <section className="advantages">
+        <StarsContain title={"Преимущества"} />
       </section>
     </>
   );
