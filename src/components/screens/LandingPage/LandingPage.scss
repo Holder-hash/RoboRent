@@ -4,10 +4,11 @@ section {
 
 .landing-wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.content-wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 .bg-cloud-contain {
@@ -79,7 +80,7 @@ section {
 }
 
 .advantages {
-  margin-top: 30px;
+  margin: 50px 0;
 
   .advantages__cards {
     display: flex;
@@ -166,4 +167,39 @@ section {
 
 .other {
   margin-top: 50px;
+
+  .other__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    .other__cards-item {
+      width: 380px;
+      height: 200px;
+      padding: 20px 90px 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      border-radius: 40px;
+      background: rgb(30, 54, 83);
+
+      .other__cards-item-title {
+        color: rgb(255, 255, 255);
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 45px;
+      }
+
+      .other__cards-item-descraption {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
 }

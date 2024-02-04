@@ -82,11 +82,40 @@ function LandingPage() {
           </div>
         </section>
 
+        <StarsContain
+          title={"Прочее"}
+          style={{ justifyContent: "right", flexDirection: "row-reverse" }}
+        />
         <section className="other">
-          <StarsContain
-            title={"Прочее"}
-            style={{ justifyContent: "right", flexDirection: "row-reverse" }}
-          />
+          <div className="other__cards">
+            <div className="other__cards-item">
+              <p className="other__cards-item-title">Наш Канал Telegram</p>
+              <p className="other__cards-item-descraption">
+                Все новости нашего проекта, обновления и нововведения
+              </p>
+            </div>
+
+            <div className="other__cards-item">
+              <p className="other__cards-item-title">Отзывы Lolzteam</p>
+              <p className="other__cards-item-descraption">
+                Все отзывы оставленные на платформе Lolzteam
+              </p>
+            </div>
+
+            <div className="other__cards-item">
+              <p className="other__cards-item-title">Документы проекта</p>
+              <p className="other__cards-item-descraption">
+                Тут вы можете найти все документы, которые относятся к проекту
+              </p>
+            </div>
+
+            <div className="other__cards-item">
+              <p className="other__cards-item-title">Связь с нами</p>
+              <p className="other__cards-item-descraption">
+                Все контакты для связи с нами Почта, тех.поддержка и прочее
+              </p>
+            </div>
+          </div>
         </section>
       </div>
     </div>
