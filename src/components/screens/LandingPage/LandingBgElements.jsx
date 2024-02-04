@@ -29,7 +29,7 @@ function LandingBgElements() {
         className="bg-cloud"
         style={{
           width: "120px",
-          top: "15%",
+          top: "4%",
           left: "32%",
           transform: "rotate(-15deg)",
         }}
