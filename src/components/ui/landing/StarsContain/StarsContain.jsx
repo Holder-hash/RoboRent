@@ -1,7 +1,7 @@
 import styles from "./StarsContain.module.scss";
 import star from "../../../../assets/svg/star.svg";
 
-function StarsContain({ title }) {
+function StarsContain({ title, className }) {
   return (
     <div className={styles.starsContain}>
       <div className={styles.titleBlock}>{title}</div>
