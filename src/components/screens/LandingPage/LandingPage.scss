@@ -166,7 +166,7 @@ section {
 }
 
 .other {
-  margin-top: 50px;
+  margin: 50px 0;
 
   .other__cards {
     width: 100%;
@@ -201,5 +201,19 @@ section {
         font-weight: 500;
       }
     }
+  }
+}
+
+.rates {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .rate__left,
+  .rate__right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }

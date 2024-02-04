@@ -1,6 +1,7 @@
 import "./LandingPage.scss";
 import LandingBgElements from "./LandingBgElements";
 import StarsContain from "../../ui/landing/StarsContain/StarsContain";
+import Rate from "../../ui/landing/rate/rate";
 
 function LandingPage() {
   return (
@@ -115,6 +116,19 @@ function LandingPage() {
                 Все контакты для связи с нами Почта, тех.поддержка и прочее
               </p>
             </div>
+          </div>
+        </section>
+
+        <StarsContain title={"Тарифы"} />
+
+        <section className="rates">
+          <div className="rate__left">
+            <Rate title={"Неделя"} price={888} />
+            <Rate title={"Неделя"} price={888} />
+          </div>
+          <div className="rate__right">
+            <Rate title={"Неделя"} price={888} />
+            <Rate title={"Неделя"} price={888} />
           </div>
         </section>
       </div>

@@ -1,0 +1,24 @@
+.contain {
+  width: 500px;
+  height: 150px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 40px;
+  background: rgb(68, 146, 252);
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.price {
+  align-self: flex-end;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 600;
+}
