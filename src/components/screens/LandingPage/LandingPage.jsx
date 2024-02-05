@@ -3,8 +3,44 @@ import LandingBgElements from "./LandingBgElements";
 import StarsContain from "../../ui/landing/StarsContain/StarsContain";
 import Rate from "../../ui/landing/rate/rate";
 import starsStyles from "../../ui/landing/StarsContain/StarsContain.module.scss";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect } from "react";
 
 function LandingPage() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useLayoutEffect(() => {
+    gsap.to(".advantages", {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+
+      scrollTrigger: {
+        trigger: ".advantages",
+      },
+    });
+    gsap.to(".other", {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      scrollTrigger: {
+        trigger: ".other",
+        start: "top 95%",
+      },
+    });
+    gsap.to(".rates", {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+
+      scrollTrigger: {
+        trigger: ".rates",
+        start: "top 95%",
+      },
+    });
+  }, []);
+
   return (
     <div className="landing-wrapper">
       <section className="overview">
