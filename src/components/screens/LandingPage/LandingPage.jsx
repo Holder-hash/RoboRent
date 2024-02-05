@@ -26,7 +26,7 @@ function LandingPage() {
       duration: 0.7,
       scrollTrigger: {
         trigger: ".other",
-        start: "top 90%",
+        start: "top 95%",
       },
     });
     gsap.to(".rates", {
@@ -36,7 +36,7 @@ function LandingPage() {
 
       scrollTrigger: {
         trigger: ".rates",
-        start: "top 90%",
+        start: "top 95%",
       },
     });
   }, []);
