@@ -26,7 +26,7 @@ function LandingBgElements() {
       />
       <img
         src={cloud}
-        className="bg-cloud"
+        className="bg-cloud bg-cloud-rm"
         style={{
           width: "120px",
           top: "4%",
@@ -46,7 +46,7 @@ function LandingBgElements() {
       />
       <img
         src={cloud}
-        className="bg-cloud"
+        className="bg-cloud bg-cloud-rm"
         style={{
           width: "200px",
           top: "5%",
