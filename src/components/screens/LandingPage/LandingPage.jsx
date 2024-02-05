@@ -2,6 +2,7 @@ import "./LandingPage.scss";
 import LandingBgElements from "./LandingBgElements";
 import StarsContain from "../../ui/landing/StarsContain/StarsContain";
 import Rate from "../../ui/landing/rate/rate";
+import starsStyles from "../../ui/landing/StarsContain/StarsContain.module.scss";
 
 function LandingPage() {
   return (
@@ -85,7 +86,7 @@ function LandingPage() {
 
         <StarsContain
           title={"Прочее"}
-          style={{ justifyContent: "right", flexDirection: "row-reverse" }}
+          className={starsStyles.starsContainReverse}
         />
         <section className="other">
           <div className="other__cards">

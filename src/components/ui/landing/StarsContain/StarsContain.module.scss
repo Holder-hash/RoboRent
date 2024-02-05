@@ -3,6 +3,23 @@
   display: flex;
   gap: 18px;
   align-items: center;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.starsContainReverse {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: right;
+  flex-direction: row-reverse;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .titleBlock {

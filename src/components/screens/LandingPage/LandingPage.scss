@@ -7,8 +7,19 @@ section {
 }
 
 .content-wrapper {
-  max-width: 1220px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 0 50px;
+
+  @media screen and (max-width: 1300px) {
+    padding: 0 130px;
+  }
+  @media screen and (max-width: 1050px) {
+    padding: 0 80px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 0 20px;
+  }
 }
 
 .bg-cloud-contain {
@@ -23,6 +34,23 @@ section {
 
   .bg-cloud {
     position: absolute;
+
+    @media screen and (max-width: 600px) {
+      width: 110px !important;
+    }
+  }
+
+  .bg-cloud-rm {
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .bg-cloud-pos {
+    @media screen and (max-width: 600px) {
+      bottom: 0% !important;
+      right: 0% !important;
+    }
   }
 }
 
@@ -33,8 +61,17 @@ section {
   height: 600px;
   display: flex;
   justify-content: center;
+  padding: 0 50px;
 
   background: rgb(69, 130, 249);
+
+  @media screen and (max-width: 600px) {
+    height: 420px;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 420px) {
+    height: 320px;
+  }
 
   .overview__inner {
     width: 100%;
@@ -43,20 +80,49 @@ section {
     align-items: center;
     justify-content: center;
     gap: 5%;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1300px) {
+      justify-content: space-around;
+    }
 
     .overview__left {
+      @media screen and (max-width: 1300px) {
+        margin-top: 50px;
+      }
+      @media screen and (max-width: 600px) {
+        margin-top: 85px;
+      }
+
       .overview__left-title {
         color: rgb(255, 255, 255);
         font-size: 96px;
         font-weight: 600;
-        line-height: 116px;
+
+        @media screen and (max-width: 1300px) {
+          font-size: 70px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 50px;
+        }
+        @media screen and (max-width: 420px) {
+          font-size: 40px;
+        }
       }
       .overview__left-description {
         margin-left: 60px;
         color: rgb(165, 211, 255);
         font-size: 24px;
         font-weight: 700;
-        line-height: 29px;
+
+        @media screen and (max-width: 1300px) {
+          font-size: 16px;
+          margin-left: 45px;
+        }
+        @media screen and (max-width: 420px) {
+          font-size: 11px;
+          margin-left: 20px;
+        }
       }
     }
 
@@ -74,6 +140,22 @@ section {
         font-weight: 600;
         color: rgb(192, 191, 192);
         cursor: pointer;
+
+        @media screen and (max-width: 1300px) {
+          width: 300px;
+          height: 90px;
+          font-size: 40px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 250px;
+          height: 60px;
+          font-size: 25px;
+        }
+        @media screen and (max-width: 420px) {
+          width: 150px;
+          height: 40px;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -88,6 +170,11 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 50px;
+    gap: 30px;
+
+    @media screen and (max-width: 1300px) {
+      justify-content: center;
+    }
 
     .advantages__cards-item_white {
       width: 380px;
@@ -104,7 +191,10 @@ section {
         color: rgb(0, 0, 0);
         font-size: 38px;
         font-weight: 600;
-        line-height: 45px;
+
+        @media screen and (max-width: 1300px) {
+          font-size: 30px;
+        }
       }
 
       .advantages__cards-item-descraption {
@@ -129,7 +219,10 @@ section {
         color: rgb(255, 255, 255);
         font-size: 38px;
         font-weight: 600;
-        line-height: 45px;
+
+        @media screen and (max-width: 1300px) {
+          font-size: 30px;
+        }
       }
 
       .advantages__cards-item-descraption {
@@ -141,6 +234,7 @@ section {
   }
 
   .advantages__about {
+    padding: 0 20px;
     margin-top: 50px;
     width: 100%;
     height: 200px;
@@ -156,6 +250,14 @@ section {
       font-size: 35px;
       font-weight: 600;
       text-align: center;
+
+      @media screen and (max-width: 1150px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+      }
 
       span {
         opacity: 0.5;
@@ -174,7 +276,7 @@ section {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
 
     .other__cards-item {
       width: 380px;
@@ -187,11 +289,21 @@ section {
       border-radius: 40px;
       background: rgb(30, 54, 83);
 
+      @media screen and (max-width: 600px) {
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
       .other__cards-item-title {
         color: rgb(255, 255, 255);
         font-size: 38px;
         font-weight: 600;
-        line-height: 45px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 28px;
+        }
       }
 
       .other__cards-item-descraption {
@@ -211,10 +323,21 @@ section {
   flex-wrap: wrap;
   gap: 50px;
 
+  @media screen and (max-width: 1150px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 600px) {
+    gap: 30px;
+  }
+
   .rate__left,
   .rate__right {
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    @media screen and (max-width: 600px) {
+      gap: 30px;
+    }
   }
 }
