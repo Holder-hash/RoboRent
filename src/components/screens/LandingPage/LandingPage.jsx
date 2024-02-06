@@ -6,8 +6,10 @@ import starsStyles from "../../ui/landing/StarsContain/StarsContain.module.scss"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const navigate = useNavigate();
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
@@ -59,7 +61,12 @@ function LandingPage() {
             </p>
           </div>
           <div className="overview__right">
-            <button className="overview__right-btn">Перейти</button>
+            <button
+              className="overview__right-btn"
+              onClick={() => navigate("/RoboRent/auth")}
+            >
+              Перейти
+            </button>
           </div>
         </div>
       </section>

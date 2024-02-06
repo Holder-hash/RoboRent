@@ -6,8 +6,10 @@ import { useLocation } from "react-router-dom";
 
 function Layout() {
   const location = useLocation();
-  if (location.pathname != "/RoboRent/bots-list") {
+  if (location.pathname == "/RoboRent") {
     document.querySelector("body").classList.add("body_dark");
+  } else {
+    document.querySelector("body").classList.remove("body_dark");
   }
   return (
     <>
