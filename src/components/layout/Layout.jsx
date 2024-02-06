@@ -13,24 +13,24 @@ function Layout() {
   }
   return (
     <>
-      {location.pathname == "/RoboRent/bots-list" && (
+      {location.pathname == "/RoboRent/bots-list/" && (
         <>
           <BackgroundElements />
           <Header />
         </>
       )}
-      {location.pathname == "/RoboRent/auth" && (
+      {location.pathname == "/RoboRent/auth/" && (
         <>
           <BackgroundElements />
         </>
       )}
 
-      <div className={location.pathname == "/RoboRent/bots-list" && "wrapper"}>
+      <div className={location.pathname == "/RoboRent/bots-list/" && "wrapper"}>
         <main>
           <Outlet />
         </main>
 
-        {location.pathname == "/RoboRent/bots-list" && (
+        {location.pathname == "/RoboRent/bots-list/" && (
           <>
             <Aside />
           </>

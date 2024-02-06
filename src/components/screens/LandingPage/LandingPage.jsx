@@ -63,7 +63,7 @@ function LandingPage() {
           <div className="overview__right">
             <button
               className="overview__right-btn"
-              onClick={() => navigate("/RoboRent/auth")}
+              onClick={() => navigate("/RoboRent/auth/")}
             >
               Перейти
             </button>
