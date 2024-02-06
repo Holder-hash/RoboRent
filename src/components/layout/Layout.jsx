@@ -19,6 +19,11 @@ function Layout() {
           <Header />
         </>
       )}
+      {location.pathname == "/RoboRent/auth" && (
+        <>
+          <BackgroundElements />
+        </>
+      )}
 
       <div className={location.pathname == "/RoboRent/bots-list" && "wrapper"}>
         <main>
