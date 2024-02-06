@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 function Layout() {
   const location = useLocation();
-  if (location.pathname == "/RoboRent/") {
+  if (location.pathname == "/RoboRent/" || location.pathname == "/RoboRent") {
     document.querySelector("body").classList.add("body_dark");
   } else {
     document.querySelector("body").classList.remove("body_dark");

@@ -31,10 +31,7 @@ function LoginPage() {
             При входе/регистрации - вы принимаете пользовательское соглашение
           </p>
           <div className={styles.buttonsContain}>
-            <button
-              className={styles.button}
-              onClick={() => navigate("/RoboRent")}
-            >
+            <button className={styles.button} onClick={() => navigate(-1)}>
               Вернуться назад
             </button>
             <input
