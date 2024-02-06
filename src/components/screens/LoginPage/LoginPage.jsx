@@ -52,7 +52,7 @@ function LoginPage() {
 
           <div className={styles.inputContain}>
             <input
-              type="text"
+              type="password"
               placeholder="Введите пароль"
               className={styles.input}
               {...register("password", {
