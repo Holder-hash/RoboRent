@@ -7,12 +7,7 @@ function Aside() {
 
   return (
     <div className="aside">
-      <div
-        className={`menu ${showMenu ? "menu_show" : ""}`}
-        style={{
-          maxHeight: showMenu ? "417px !important" : "",
-        }}
-      >
+      <div className={`menu ${showMenu ? "menu_show" : ""}`}>
         <div className="menu__title" onClick={() => setShowMenu(!showMenu)}>
           <p>Прочее:</p>
           <IoIosArrowForward
