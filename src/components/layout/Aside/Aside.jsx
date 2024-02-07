@@ -1,10 +1,22 @@
 import "./Aside.scss";
+import { IoIosArrowForward } from "react-icons/io";
 
 function Aside() {
+  function menuClickHandler(event) {
+    event.target.classList.toggle("menu__arrow_active");
+  }
+
   return (
     <div className="aside">
       <div className="menu">
-        <p>Прочее:</p>
+        <div className="menu__title">
+          <p>Прочее:</p>
+          <IoIosArrowForward
+            className="menu__arrow"
+            onClick={() => menuClickHandler(event)}
+          />
+        </div>
+
         <nav>
           <ul>
             <li className="nav__item">
