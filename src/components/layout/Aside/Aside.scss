@@ -6,11 +6,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: 0.5s;
 
   @media screen and (max-width: 950px) {
     position: unset;
     height: auto;
     width: 100%;
+    overflow: hidden;
+    border-radius: 40px;
   }
 
   .menu {
@@ -23,6 +26,10 @@
     color: #fff;
     font-size: 24px;
     font-weight: 600;
+    transition: 1s ease-out;
+    @media screen and (max-width: 950px) {
+      max-height: 75px;
+    }
 
     .menu__title {
       display: flex;
@@ -96,4 +103,8 @@
       }
     }
   }
+}
+
+.menu_show {
+  max-height: 417px !important;
 }

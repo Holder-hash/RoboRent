@@ -1,19 +1,22 @@
 import "./Aside.scss";
 import { IoIosArrowForward } from "react-icons/io";
+import { useState } from "react";
 
 function Aside() {
-  function menuClickHandler(event) {
-    event.target.classList.toggle("menu__arrow_active");
-  }
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <div className="aside">
-      <div className="menu">
-        <div className="menu__title">
+      <div
+        className={`menu ${showMenu ? "menu_show" : ""}`}
+        style={{
+          maxHeight: showMenu ? "417px !important" : "",
+        }}
+      >
+        <div className="menu__title" onClick={() => setShowMenu(!showMenu)}>
           <p>Прочее:</p>
           <IoIosArrowForward
-            className="menu__arrow"
-            onClick={() => menuClickHandler(event)}
+            className={`menu__arrow ${showMenu ? "menu__arrow_active" : ""}`}
           />
         </div>
 
