@@ -70,6 +70,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
       }
 
       .nav__item {
@@ -85,7 +86,7 @@
 
         @media screen and (max-width: 950px) {
           width: 160px;
-          height: 49px;
+          height: 42px;
         }
 
         a {
