@@ -20,6 +20,14 @@
       justify-content: space-between;
       padding: 0px 25px 0px 14px;
 
+      @media screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+        height: auto;
+      }
+
       .bots__item-info {
         display: flex;
         gap: 17px;
@@ -46,6 +54,18 @@
       .bots__item-buttons {
         display: flex;
         gap: 25px;
+
+        @media screen and (max-width: 750px) {
+          padding-left: 65px;
+          gap: 10px;
+        }
+        @media screen and (max-width: 401px) {
+          flex-direction: column;
+          width: 100%;
+          button {
+            width: 100%;
+          }
+        }
       }
     }
   }
