@@ -9,6 +9,10 @@ header {
   font-size: 16px;
   font-weight: 600;
 
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+
   .logo__contain {
     align-self: center;
   }
