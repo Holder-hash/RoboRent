@@ -6,7 +6,7 @@
   width: 50px;
   height: 50px;
   padding: 9px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
@@ -14,6 +14,10 @@
   background: #152333;
   border-radius: 16px;
   border: 1px solid #c0bfc06e;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+  }
 }
 
 .menuBtnItem {
