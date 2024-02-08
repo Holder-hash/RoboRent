@@ -1,12 +1,32 @@
 import "./Aside.scss";
 import { IoIosArrowForward } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Aside() {
   const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setisMobile] = useState(false);
+
+  useEffect(() => {
+    window.innerWidth <= 750 && setisMobile(true);
+  }, []);
+
+  const headerElemnt = document.querySelector("header");
+
+  if (window.innerWidth <= 750 && headerElemnt) {
+    const asideElement = document.querySelector(".aside");
+    const balanceElement = document.querySelector(".balance__contain");
+    const profileElement = document.querySelector(".user-info__contain");
+    headerElemnt && headerElemnt.appendChild(asideElement);
+    profileElement.appendChild(balanceElement);
+  }
 
   return (
-    <div className="aside">
+    <div
+      className="aside"
+      style={{
+        display: isMobile ? "flex" : "none",
+      }}
+    >
       <div className={`menu ${showMenu ? "menu_show" : ""}`}>
         <div className="menu__title" onClick={() => setShowMenu(!showMenu)}>
           <p>Прочее:</p>
