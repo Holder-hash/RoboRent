@@ -21,7 +21,10 @@ function Layout() {
       {location.pathname == "/RoboRent/bots-list/" && (
         <>
           <BackgroundElements />
-          <MenuBtn onClick={() => setMenuActive(!menuActive)} />
+          <MenuBtn
+            onClick={() => setMenuActive(!menuActive)}
+            menuActive={menuActive}
+          />
           <Header menuActive={menuActive} />
         </>
       )}

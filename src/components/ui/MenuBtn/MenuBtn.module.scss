@@ -17,7 +17,34 @@
 }
 
 .menuBtnItem {
-  width: 100%;
+  position: absolute;
+  width: 70%;
   height: 1px;
   border: 1px solid #c0bfc06e;
+  transition: 0.3s;
+}
+.menuBtnItem:nth-child(1) {
+  transform: translateY(-10px);
+}
+.menuBtnItem:nth-child(2) {
+  transform: translateY(0);
+}
+.menuBtnItem:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.menuActive {
+  justify-content: center;
+  .menuBtnItem:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  .menuBtnItem:nth-child(2) {
+    // display: none;
+    transform: rotate(-45deg);
+
+    opacity: 0;
+  }
+  .menuBtnItem:nth-child(3) {
+    transform: rotate(45deg);
+  }
 }
