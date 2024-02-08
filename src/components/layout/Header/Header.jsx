@@ -1,10 +1,10 @@
 import "./Header.scss";
 import Logo from "../../../assets/svg/logo.svg";
 
-function Header() {
+function Header({ menuActive }) {
   return (
     <>
-      <header>
+      <header className={menuActive ? "menuActive" : ""}>
         <div className="logo__contain">
           <img src={Logo} alt="RoboRent" />
         </div>

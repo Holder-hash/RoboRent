@@ -4,8 +4,10 @@ import Header from "./Header/Header";
 import Aside from "./Aside/Aside";
 import BackgroundElements from "./BackgroundElements/BackgroundElements";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function Layout() {
+  const [menuActive, setMenuActive] = useState(false);
   const location = useLocation();
 
   if (location.pathname == "/RoboRent/" || location.pathname == "/RoboRent") {
@@ -19,8 +21,8 @@ function Layout() {
       {location.pathname == "/RoboRent/bots-list/" && (
         <>
           <BackgroundElements />
-          <MenuBtn />
-          <Header />
+          <MenuBtn onClick={() => setMenuActive(!menuActive)} />
+          <Header menuActive={menuActive} />
         </>
       )}
       {location.pathname == "/RoboRent/auth/" && (
