@@ -27,7 +27,9 @@ header {
     justify-content: space-between;
 
     @media screen and (max-width: 750px) {
-      height: unset;
+      height: 150px;
+      position: absolute;
+      top: 0;
     }
   }
 
@@ -37,7 +39,7 @@ header {
     @media screen and (max-width: 750px) {
       align-self: unset;
       padding-top: 15px;
-      position: absolute;
+      // position: absolute;
       top: 0;
     }
   }
@@ -53,6 +55,14 @@ header {
     border-radius: 0px 0px 40px 40px;
     background: #1e3653;
 
+    @media screen and (max-width: 750px) {
+      position: relative;
+      top: 15px;
+      align-items: unset;
+      width: auto;
+      display: block;
+    }
+
     p:nth-child(1) {
       color: #fff;
       font-family: Inter;
@@ -60,6 +70,10 @@ header {
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+
+      @media screen and (max-width: 750px) {
+        font-size: 11px;
+      }
     }
     p:nth-child(2) {
       color: #c0bfc0;
@@ -94,9 +108,9 @@ header {
 
     @media screen and (max-width: 750px) {
       flex-direction: column;
-      position: absolute;
-      right: 0;
-      top: 50px;
+      // position: absolute;
+      right: 40px;
+      top: 0px;
     }
 
     .user-info__inner {
@@ -111,6 +125,8 @@ header {
 
       @media screen and (max-width: 750px) {
         position: unset;
+        transform: unset;
+        flex-direction: row-reverse;
       }
 
       .user-info__avatar {
