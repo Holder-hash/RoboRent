@@ -144,6 +144,11 @@ header {
         shape-outside: margin-box;
         float: left;
 
+        @media screen and (max-width: 750px) {
+          text-align: right;
+          justify-content: center;
+        }
+
         .user-info__links-name {
           color: #fff;
           font-family: Inter;
