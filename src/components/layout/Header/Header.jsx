@@ -4,7 +4,7 @@ import Logo from "../../../assets/svg/logo.svg";
 function Header({ menuActive }) {
   return (
     <>
-      <header className={menuActive ? "menuActive" : ""}>
+      <header className={`header ${menuActive ? "menuActive" : ""}`}>
         <div className="header__inner">
           <div className="logo__contain">
             <img src={Logo} alt="RoboRent" />

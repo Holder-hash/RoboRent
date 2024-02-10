@@ -27,9 +27,9 @@ header {
     justify-content: space-between;
 
     @media screen and (max-width: 750px) {
-      height: 150px;
       position: absolute;
       top: 0;
+      height: auto;
     }
   }
 
@@ -59,7 +59,7 @@ header {
       position: relative;
       top: 15px;
       align-items: unset;
-      width: 77px;
+      width: 150px;
       display: block;
     }
 
@@ -108,10 +108,10 @@ header {
 
     @media screen and (max-width: 750px) {
       flex-direction: column;
-      // position: absolute;
       right: 40px;
       top: 4px;
       background: none;
+      width: auto;
     }
 
     .user-info__inner {
@@ -125,9 +125,14 @@ header {
       max-height: 59px;
 
       @media screen and (max-width: 750px) {
+        align-items: center;
+        height: inherit;
         position: unset;
         transform: unset;
         flex-direction: row-reverse;
+        width: auto;
+        min-width: unset;
+        margin-right: 15px;
       }
 
       .user-info__avatar {
@@ -135,6 +140,11 @@ header {
         height: 59px;
         border-radius: 50%;
         background-color: white;
+
+        @media screen and (max-width: 750px) {
+          width: 50px;
+          height: 50px;
+        }
       }
 
       .user-info__links {
@@ -156,6 +166,10 @@ header {
           font-style: normal;
           font-weight: 600;
           line-height: normal;
+
+          @media screen and (max-width: 750px) {
+            font-size: 14px;
+          }
         }
         .user-info__links-telegram {
           text-decoration: none;

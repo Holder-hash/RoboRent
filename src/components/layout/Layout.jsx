@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import Aside from "./Aside/Aside";
 import BackgroundElements from "./BackgroundElements/BackgroundElements";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Layout() {
   const [menuActive, setMenuActive] = useState(false);
@@ -15,6 +15,12 @@ function Layout() {
   } else {
     document.querySelector("body").classList.remove("body_dark");
   }
+
+  useEffect(() => {
+    document.querySelector("body").style = `
+      overflow-y: ${menuActive ? "hidden" : "auto"}
+    `;
+  });
 
   return (
     <>

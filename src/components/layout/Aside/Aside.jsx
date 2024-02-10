@@ -14,9 +14,8 @@ function Aside() {
 
   if (window.innerWidth <= 750 && headerElemnt) {
     const asideElement = document.querySelector(".aside");
-    const balanceElement = document.querySelector(".balance__contain");
     const logoElement = document.querySelector(".logo__contain");
-    const profileElement = document.querySelector(".user-info__contain");
+
     headerElemnt && headerElemnt.appendChild(asideElement);
     asideElement.appendChild(logoElement);
   }
