@@ -2,6 +2,7 @@ import "./Header.scss";
 import Logo from "../../../assets/svg/logo.svg";
 import SimpleModal from "../../SimpleModal/SimpleModal";
 import { useState } from "react";
+import "../../css/modal.scss";
 
 function Header({ menuActive }) {
   const [connectTgModal, setConnectTgModal] = useState(false);
@@ -11,20 +12,18 @@ function Header({ menuActive }) {
       <SimpleModal
         isOpen={connectTgModal}
         setConnectTgModal={setConnectTgModal}
+        className={"modal"}
       >
-        <h2>Simple title</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-          aliquam animi. Molestias quisquam rerum aperiam praesentium
-          reprehenderit consequatur, nihil inventore beatae ducimus quia
-          repellendus facilis recusandae maxime ipsa perferendis magnam sit
-          dignissimos doloribus cupiditate assumenda at fugiat placeat repellat.
-          Ratione, minus officia et sunt culpa nobis facere optio natus mollitia
-          labore non iste nostrum earum repellat provident architecto qui porro
-          deleniti eos dolorum. Aut aspernatur vero voluptate amet numquam nulla
-          officiis! Deserunt eaque, autem cum ducimus necessitatibus dolores
-          consequuntur voluptatem.
-        </p>
+        <form action="" className="modal__form">
+          <div className="modal__blocks-wrapper">
+            <div className="modal__blocks-item"></div>
+            <div className="modal__blocks-item"></div>
+            <div className="modal__blocks-item"></div>
+          </div>
+          <input type="text" placeholder="какой то текст" />
+          <input type="text" placeholder="какой то текст" />
+          <input type="submit" />
+        </form>
       </SimpleModal>
 
       <header className={`header ${menuActive ? "menuActive" : ""}`}>
