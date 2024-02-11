@@ -1,8 +1,18 @@
-._modalBg_okfec_1--entered,
-._modalBg_okfec_1--entering {
+._modalBg_1y4tv_1--entered,
+._modalBg_1y4tv_1--entering {
   opacity: 1 !important;
 }
-._modalBg_okfec_1--exiting,
-._modalBg_okfec_1--exited {
+._modalBg_1y4tv_1--entered ._modalContent_1y4tv_22,
+._modalBg_1y4tv_1--entering ._modalContent_1y4tv_22 {
+  transform: translateY(0);
+}
+
+._modalBg_1y4tv_1--exiting,
+._modalBg_1y4tv_1--exited {
   opacity: 0 !important;
+}
+
+._modalBg_1y4tv_1--exiting ._modalContent_1y4tv_22,
+._modalBg_1y4tv_1--exited ._modalContent_1y4tv_22 {
+  transform: translateY(-20px);
 }
