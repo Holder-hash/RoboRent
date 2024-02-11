@@ -1,11 +1,10 @@
-import styles from "./SimpleModal.module.scss";
+import "./SimpleModal.scss";
 import { IoMdClose } from "react-icons/io";
 import { Transition } from "react-transition-group";
-import "./SimpleModalState.scss";
 
 function SimpleModal({ children, isOpen, setConnectTgModal }) {
   function onModalBgClick(event) {
-    if (event.target.classList.contains(styles.modalwrapper))
+    if (event.target.classList.contains("modalwrapper"))
       setConnectTgModal(false);
   }
 
@@ -13,11 +12,11 @@ function SimpleModal({ children, isOpen, setConnectTgModal }) {
     <>
       <Transition in={isOpen} timeout={350} unmountOnExit={true}>
         {(state) => (
-          <div className={`${styles.modalBg} ${styles.modalBg}--${state}`}>
-            <div className={styles.modalwrapper} onClick={onModalBgClick}>
-              <div className={styles.modalContent}>
+          <div className={`modalBg modalBg--${state}`}>
+            <div className="modalwrapper" onClick={onModalBgClick}>
+              <div className="modalContent">
                 <IoMdClose
-                  className={styles.closeBtn}
+                  className="closeBtn"
                   onClick={() => setConnectTgModal(false)}
                 />
                 {children}

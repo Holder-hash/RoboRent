@@ -9,6 +9,25 @@
   transition: 0.35s;
 }
 
+.modalBg--entered,
+.modalBg--entering {
+  opacity: 1 !important;
+}
+.modalBg--entered .modalContent,
+.modalBg--entering .modalContent {
+  transform: translateY(0);
+}
+
+.modalBg--exiting,
+.modalBg--exited {
+  opacity: 0 !important;
+}
+
+.modalBg--exiting .modalContent,
+.modalBg--exited .modalContent {
+  transform: translateY(-20px);
+}
+
 .modalwrapper {
   position: absolute;
   left: 0;
