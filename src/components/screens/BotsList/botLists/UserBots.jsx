@@ -48,21 +48,24 @@ function UserBots() {
   //   </li>
   // ));
 
-  return apiDataBot.map((bot, index) => (
-    <li key={index}>
-      <div className="bots__item-info">
-        <img src={bot.img} />
-        <div>
-          <p className="bots__item-name">{bot}</p>
-          <p className="bots__item-status">Статус: </p>
+  return (
+    apiDataBot &&
+    apiDataBot.map((bot, index) => (
+      <li key={index}>
+        <div className="bots__item-info">
+          <img src={bot.img} />
+          <div>
+            <p className="bots__item-name">{bot}</p>
+            <p className="bots__item-status">Статус: </p>
+          </div>
         </div>
-      </div>
-      <div className="bots__item-buttons">
-        <BotsListBtn>Перейти в бота</BotsListBtn>
-        <BotsListBtn>Настроить</BotsListBtn>
-      </div>
-    </li>
-  ));
+        <div className="bots__item-buttons">
+          <BotsListBtn>Перейти в бота</BotsListBtn>
+          <BotsListBtn>Настроить</BotsListBtn>
+        </div>
+      </li>
+    ))
+  );
 }
 
 export default UserBots;
