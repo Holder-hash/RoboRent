@@ -74,7 +74,7 @@ function Header({ menuActive }) {
                 <p className="user-info__links-name">
                   @{apiData && apiData.login}
                 </p>
-                {apiData.tg == "none" ? (
+                {apiData && apiData.tg == "none" ? (
                   <a
                     href="https://t.me/ввввввввв?start=test_test2"
                     className="user-info__links-telegram"
