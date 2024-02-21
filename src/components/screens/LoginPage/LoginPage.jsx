@@ -28,8 +28,6 @@ function LoginPage() {
       )
       .then((response) => {
         sessionStorage.setItem("apiData", JSON.stringify(response.data));
-        console.log("Ответ от сервера:", response.data);
-        console.log(sessionStorage.getItem("apiData"));
       })
       .then(() => {
         navigate("/RoboRent/bots-list/");
@@ -77,7 +75,7 @@ function LoginPage() {
                 required:
                   "Логин должен быть больше 5 символов и не включать в себя спец. символы!",
                 pattern: {
-                  value: /[^@!#$%^&*()"№;%:?]{5,}/,
+                  value: /[^@!#$%^&*()"№;%:?]{1,}/,
                   message:
                     "Логин должен быть больше 5 символов и не включать в себя спец. символы!",
                 },
@@ -97,7 +95,7 @@ function LoginPage() {
                 required:
                   "Пароль должен быть больше 5 символов и не включать в себя спец. символы!",
                 pattern: {
-                  value: /[^@!#$%^&*()"№;%:?]{5,}/,
+                  value: /[^@!#$%^&*()"№;%:?]{1,}/,
                   message:
                     "Пароль должен быть больше 5 символов и не включать в себя спец. символы!",
                 },
