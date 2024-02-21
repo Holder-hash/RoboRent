@@ -11,8 +11,10 @@ function Header({ menuActive }) {
   const [apiData, setApiData] = useState();
 
   useEffect(() => {
-    setApiData(JSON.parse(sessionStorage.getItem("apiData")));
-  }, [sessionStorage.getItem("apiData")]);
+    const data = JSON.parse(sessionStorage.getItem("apiData"));
+    setApiData(data);
+  }, []);
+
   return (
     <>
       <SimpleModal
@@ -69,7 +71,9 @@ function Header({ menuActive }) {
                 <img src="" alt="" />
               </div>
               <div className="user-info__links">
-                <p className="user-info__links-name">@{apiData.login}</p>
+                <p className="user-info__links-name">
+                  @{apiData && apiData.login}
+                </p>
                 <a
                   href="https://t.me/ввввввввв?start=test_test2"
                   className="user-info__links-telegram"

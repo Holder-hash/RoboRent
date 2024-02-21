@@ -1,6 +1,7 @@
 import styles from "./LoginPage.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function LoginPage() {
   const {
@@ -11,8 +12,43 @@ function LoginPage() {
   const navigate = useNavigate();
 
   function onSubmitHandler(data) {
-    console.log(data);
-    navigate("/RoboRent/bots-list/");
+    // пост
+    axios
+      .post(
+        "https://roborent.online/api/v1.0/login.php",
+
+        null,
+        {
+          params: {
+            login: data.login,
+            pass: data.password,
+            token: "123123",
+          },
+        }
+      )
+      .then((response) => {
+        sessionStorage.setItem("apiData", JSON.stringify(response.data));
+        console.log("Ответ от сервера:", response.data);
+        console.log(sessionStorage.getItem("apiData"));
+      })
+      .then(() => {
+        navigate("/RoboRent/bots-list/");
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке данных на сервер:", error);
+      });
+
+    //гет
+    // axios
+    //   .get(
+    //     "https://roborent.online/api/v1.0/login.php?login=123&pass=eeee&token=123123"
+    //   )
+    //   .then((response) => {
+    //     sessionStorage.setItem("apiData", JSON.stringify(response.data));
+    //   })
+    //   .catch((error) => {
+    //     console.error("Ошибка при получении данных из API:", error);
+    //   });
   }
 
   const loginErrorMessage = () => {
@@ -36,6 +72,7 @@ function LoginPage() {
               type="text"
               placeholder="Введите логин"
               className={styles.input}
+              name="login"
               {...register("login", {
                 required:
                   "Логин должен быть больше 5 символов и не включать в себя спец. символы!",
@@ -55,6 +92,7 @@ function LoginPage() {
               type="password"
               placeholder="Введите пароль"
               className={styles.input}
+              name="pass"
               {...register("password", {
                 required:
                   "Пароль должен быть больше 5 символов и не включать в себя спец. символы!",
@@ -73,7 +111,13 @@ function LoginPage() {
             При входе/регистрации - вы принимаете пользовательское соглашение
           </p>
           <div className={styles.buttonsContain}>
-            <button className={styles.button} onClick={() => navigate(-1)}>
+            <button
+              className={styles.button}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(-1);
+              }}
+            >
               Вернуться назад
             </button>
             <input
