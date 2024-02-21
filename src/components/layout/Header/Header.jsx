@@ -1,11 +1,13 @@
 import "./Header.scss";
 import Logo from "../../../assets/svg/logo.svg";
 import SimpleModal from "../../SimpleModal/SimpleModal";
+import ReplenishModal from "../../../ReplenishModal/ReplenishModal";
 import { useState } from "react";
 import "../../css/modal.scss";
 
 function Header({ menuActive }) {
   const [connectTgModal, setConnectTgModal] = useState(false);
+  const [replenishModal, setReplenishModal] = useState(false);
 
   return (
     <>
@@ -26,16 +28,33 @@ function Header({ menuActive }) {
         </form>
       </SimpleModal>
 
+      <ReplenishModal
+        isOpen={replenishModal}
+        setReplenishModal={setReplenishModal}
+        className={"modal"}
+      >
+        <form action="" className="modal__form">
+          <div className="modal__blocks-wrapper">
+            <div className="modal__blocks-item"></div>
+            <div className="modal__blocks-item"></div>
+            <div className="modal__blocks-item"></div>
+          </div>
+          <input type="text" placeholder="какой то текст" />
+          <input type="text" placeholder="какой то текст" />
+          <input type="submit" />
+        </form>
+      </ReplenishModal>
+
       <header className={`header ${menuActive ? "menuActive" : ""}`}>
         <div className="header__inner">
           <div className="logo__contain">
             <img src={Logo} alt="RoboRent" />
           </div>
           <div className="balance__contain">
-            <p>
+            <p onClick={() => setReplenishModal(true)}>
               Баланс: <span>1000</span>Р<a href="#">Пополнить</a>
             </p>
-            <p>
+            <p onClick={() => setConnectTgModal(true)}>
               Баланс ботов: <span>1000</span>Р<a href="#">Вывести</a>
             </p>
           </div>
@@ -47,13 +66,12 @@ function Header({ menuActive }) {
               </div>
               <div className="user-info__links">
                 <p className="user-info__links-name">@Diblaodjsss</p>
-                <p
-                  href=""
+                <a
+                  href="https://t.me/ввввввввв?start=test_test2"
                   className="user-info__links-telegram"
-                  onClick={() => setConnectTgModal(true)}
                 >
                   Привязать Telegram
-                </p>
+                </a>
                 <p className="user-info__links-subscription">
                   Подписка: <span>отсутствует</span>
                 </p>

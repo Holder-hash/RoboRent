@@ -3,7 +3,6 @@ import Layout from "./components/layout/Layout.jsx";
 import BotsList from "./components/screens/BotsList/BotsList.jsx";
 import LandingPage from "./components/screens/LandingPage/LandingPage.jsx";
 import LoginPage from "./components/screens/LoginPage/LoginPage.jsx";
-import { useEffect } from "react";
 import axios from "axios";
 
 function App() {
