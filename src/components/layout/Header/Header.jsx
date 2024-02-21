@@ -74,12 +74,24 @@ function Header({ menuActive }) {
                 <p className="user-info__links-name">
                   @{apiData && apiData.login}
                 </p>
-                <a
-                  href="https://t.me/ввввввввв?start=test_test2"
-                  className="user-info__links-telegram"
-                >
-                  Привязать Telegram
-                </a>
+                {apiData.tg == "none" ? (
+                  <a
+                    href="https://t.me/ввввввввв?start=test_test2"
+                    className="user-info__links-telegram"
+                  >
+                    Привязать Telegram
+                  </a>
+                ) : (
+                  <p
+                    className="user-info__links-telegram"
+                    style={{
+                      color: "green",
+                      cursor: "unset",
+                    }}
+                  >
+                    Telegram привязан
+                  </p>
+                )}
                 <p className="user-info__links-subscription">
                   Подписка: <span>отсутствует</span>
                 </p>
