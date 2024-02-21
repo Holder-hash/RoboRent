@@ -2,13 +2,17 @@ import "./Header.scss";
 import Logo from "../../../assets/svg/logo.svg";
 import SimpleModal from "../../SimpleModal/SimpleModal";
 import ReplenishModal from "../../../ReplenishModal/ReplenishModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../css/modal.scss";
 
 function Header({ menuActive }) {
   const [connectTgModal, setConnectTgModal] = useState(false);
   const [replenishModal, setReplenishModal] = useState(false);
+  const [apiData, setApiData] = useState();
 
+  useEffect(() => {
+    setApiData(JSON.parse(sessionStorage.getItem("apiData")));
+  }, [sessionStorage.getItem("apiData")]);
   return (
     <>
       <SimpleModal
@@ -65,7 +69,7 @@ function Header({ menuActive }) {
                 <img src="" alt="" />
               </div>
               <div className="user-info__links">
-                <p className="user-info__links-name">@Diblaodjsss</p>
+                <p className="user-info__links-name">@{apiData.login}</p>
                 <a
                   href="https://t.me/ввввввввв?start=test_test2"
                   className="user-info__links-telegram"
